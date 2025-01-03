@@ -10,7 +10,7 @@ async function main() {
     await fastify.register(cors, {
         origin: "*",
         methods: ["GET", "POST", "OPTIONS", "HEAD"],
-        allowedHeaders: ["Content-Type"],
+        allowedHeaders: ["Content-Type", "Authorization", "Accept", "Allow-Origin-Access-Control"],
     });
 
     await fastify.register(discordRoutes);
