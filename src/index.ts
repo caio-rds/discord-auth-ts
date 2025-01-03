@@ -9,7 +9,7 @@ async function main() {
 
     await fastify.register(cors, {
         origin: "*",
-        methods: ["GET", "POST"],
+        methods: ["GET", "POST", "OPTIONS", "HEAD"],
         allowedHeaders: ["Content-Type"],
     });
 
