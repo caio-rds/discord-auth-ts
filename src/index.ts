@@ -15,7 +15,7 @@ async function main() {
 
     await fastify.register(discordRoutes);
 
-    const PORT = 5000;
+    const PORT = process.env.PORT? parseInt(process.env.PORT) : 5000;
     fastify.listen({port: PORT}, (err, address) => {
         if (err) {
             fastify.log.error(err);
